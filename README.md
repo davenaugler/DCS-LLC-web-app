@@ -1,6 +1,8 @@
-# DCS-LLC-Website
+# Dalrymple Construction Services, LLC (DCS, LLC)
 
-## Marketing Website for Construction company DCS, LLC.
+## Overview
 
-- View website at **[DalrympleConstructionLLC](https://dalrympleconstructionllc.com/)**
+This repository contains the source code for the Marketing Web App for Dalrymple Construction Services, LLC (DCS, LLC). The web application serves as the online presence of the company, highlighting its services, portfolio, and contact information.
 
+## Live Website
+Visit the website: [DalrympleConstructionLLC](https://dalrympleconstructionllc.com/)
