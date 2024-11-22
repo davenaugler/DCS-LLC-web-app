@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 bg-background/80 backdrop-blur-sm">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5 text-xl font-bold text-foreground">
               Dalrymple Construction
@@ -60,15 +60,16 @@ export default function Navbar() {
         </nav>
       </header>
 
-      {/* Mobile menu dialog */}
+      {/* Mobile menu overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[9999] overflow-hidden">
+        <div className="fixed inset-0 z-[9999]">
           <div 
             className="fixed inset-0 bg-black/50 backdrop-blur-sm" 
             onClick={() => setMobileMenuOpen(false)} 
           />
-          <div className="fixed inset-y-0 right-0 flex w-full flex-col bg-background p-6 shadow-lg sm:max-w-sm">
-            <div className="flex items-center justify-between">
+          <div className="fixed inset-y-0 right-0 flex w-full flex-col bg-background shadow-lg sm:max-w-sm">
+            {/* Reuse the header height to ensure alignment */}
+            <div className="flex h-[72px] items-center justify-between px-6">
               <Link 
                 href="/" 
                 className="text-xl font-bold text-foreground"
@@ -85,20 +86,19 @@ export default function Navbar() {
                 <X className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <nav className="mt-6 flow-root">
-              <div className="divide-y divide-border">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block rounded-lg px-3 py-2 text-base font-semibold text-foreground hover:bg-accent/50 transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
+            
+            <nav className="flex-1 overflow-y-auto px-6">
+              <div className="space-y-2 py-6">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="block rounded-lg px-3 py-2 text-base font-semibold text-foreground hover:bg-accent/50 transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </nav>
           </div>
