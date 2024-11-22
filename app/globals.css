@@ -80,3 +80,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* added based off of Claude.ai */
+
+:root {
+  --viewport-height: 100vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+  :root {
+    --viewport-height: -webkit-fill-available;
+  }
+}
+
+.mobile-menu-open {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+}
+
+#__next {
+  isolation: isolate;
+}
