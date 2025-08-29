@@ -166,6 +166,9 @@ export default function Portfolio() {
                         alt={project.title}
                         fill
                         className="object-cover transition-transform duration-300 hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 40vw, 30vw"
+                        loading={index === 0 ? "eager" : "lazy"}
+                        quality={80}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                     </div>
@@ -218,12 +221,6 @@ export default function Portfolio() {
 }
 
 
-// import Image from "next/image";
-// import { CircleDot } from "lucide-react";
-// import { Button } from "@/components/ui/button";
-// import Link from "next/link";
-
-// const projects = [
 //   {
 //     title: "Luxury Residential Complex",
 //     category: "Residential",
@@ -332,96 +329,3 @@ export default function Portfolio() {
 //       "Natural lighting optimization",
 //     ],
 //   },
-// ];
-
-// export default function Portfolio() {
-//   return (
-//     <>
-//       {/* Hero Section */}
-//       <section className="relative py-24">
-//         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-//           <div className="mx-auto max-w-2xl text-center">
-//             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Our Portfolio</h1>
-//             <p className="mt-6 text-lg leading-8 text-gray-600">
-//               Two decades of excellence in construction, showcasing our evolution and innovation
-//             </p>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Projects Timeline */}
-//       <section className="py-24 bg-gray-50">
-//         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-//           <div className="space-y-32">
-//             {projects.map((project, index) => (
-//               <div key={index} className="relative grid grid-cols-[1fr_1.5fr_2fr] gap-8 items-start">
-//                 {/* Year and Highlights */}
-//                 <div className="space-y-6">
-//                   <div className="sticky top-24 bg-gray-50/80 backdrop-blur-sm rounded-lg p-6">
-//                     <span className="text-7xl font-bold text-primary block mb-8">{project.year}</span>
-//                     <div className="space-y-3">
-//                       {project.highlights.map((highlight, idx) => (
-//                         <div key={idx} className="flex items-start gap-3 text-sm text-gray-600 pl-2">
-//                           <CircleDot className="h-4 w-4 flex-shrink-0 text-primary mt-1" />
-//                           <span className="leading-relaxed">{highlight}</span>
-//                         </div>
-//                       ))}
-//                     </div>
-//                   </div>
-//                 </div>
-
-//                 {/* Image */}
-//                 <div className="relative h-[300px] overflow-hidden rounded-xl shadow-lg">
-//                   <Image
-//                     src={project.image}
-//                     alt={project.title}
-//                     fill
-//                     className="object-cover transition-transform duration-300 hover:scale-105"
-//                   />
-//                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-//                 </div>
-
-//                 {/* Project Details */}
-//                 <div className="space-y-6 pl-6">
-//                   <div className="space-y-2">
-//                     <span className="text-sm font-medium text-primary/80 uppercase tracking-wider">
-//                       {project.category}
-//                     </span>
-//                     <h3 className="text-2xl font-bold leading-tight">{project.title}</h3>
-//                   </div>
-//                   <p className="text-gray-600 leading-relaxed">
-//                     {project.description}
-//                   </p>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* CTA Section */}
-//       <section className="bg-primary py-24 text-white">
-//         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-//           <div className="mx-auto max-w-2xl text-center">
-//             <h2 className="text-3xl font-bold tracking-tight">
-//               Ready to Start Your Project?
-//             </h2>
-//             <p className="mt-6 text-lg leading-8">
-//               Contact us today to discuss your construction needs.
-//             </p>
-//             <div className="mt-10">
-//               <Button
-//                 size="lg"
-//                 variant="outline"
-//                 className="bg-white text-black hover:bg-white/90 border-white"
-//                 asChild
-//               >
-//                 <Link href="/contact">Get in Touch</Link>
-//               </Button>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// }

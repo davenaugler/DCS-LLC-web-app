@@ -75,6 +75,9 @@ export default function Services() {
                     alt={service.title}
                     fill
                     className="rounded-lg object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                    quality={80}
                   />
                 </div>
                 <div className="flex flex-col justify-center">

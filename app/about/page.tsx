@@ -26,6 +26,9 @@ export default function About() {
                 alt="Company history"
                 fill
                 className="rounded-lg object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+                quality={80}
               />
             </div>
             <div>
@@ -106,6 +109,9 @@ export default function About() {
                     alt={member.name}
                     fill
                     className="object-cover"
+                    sizes="256px"
+                    loading="lazy"
+                    quality={80}
                   />
                 </div>
                 <h3 className="mt-6 text-2xl font-semibold">{member.name}</h3>

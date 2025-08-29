@@ -14,6 +14,8 @@ export default function Home() {
             fill
             className="object-cover brightness-50"
             priority
+            sizes="100vw"
+            quality={85}
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -79,6 +81,8 @@ export default function Home() {
                     alt={service.title}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
                   />
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-6">
