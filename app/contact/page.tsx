@@ -5,6 +5,24 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+const contactInfo = [
+  {
+    icon: MapPin,
+    title: "Office Location",
+    content: ["201 S. Commercial Ave", "New Meadows, ID 83654"],
+  },
+  {
+    icon: Phone,
+    title: "Phone",
+    content: ["Joe Dalrymple: (208) 283-9165", "Kim Dalrymple: (208) 473-0895"],
+  },
+  {
+    icon: Mail,
+    title: "Email",
+    content: ["info@dcsllcmccall.com"],
+  },
+];
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -61,29 +79,24 @@ export default function Contact() {
               </p>
 
               <div className="mt-12 space-y-8">
-                <div className="flex items-center gap-4">
-                  <MapPin className="h-6 w-6 text-primary" />
-                  <div>
-                    <h3 className="font-semibold">Our Office</h3>
-                    <p className="mt-1 text-gray-600">123 Construction Ave<br />McCall, ID 83638</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <Phone className="h-6 w-6 text-primary" />
-                  <div>
-                    <h3 className="font-semibold">Phone</h3>
-                    <p className="mt-1 text-gray-600">(208) 283-9165</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <Mail className="h-6 w-6 text-primary" />
-                  <div>
-                    <h3 className="font-semibold">Email</h3>
-                    <p className="mt-1 text-gray-600">info@builddalrymple.com</p>
-                  </div>
-                </div>
+                {contactInfo.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.title} className="flex items-start gap-4">
+                      <Icon className="h-6 w-6 text-primary mt-0.5" />
+                      <div>
+                        <h3 className="font-semibold">{item.title}</h3>
+                        <div className="mt-1">
+                          {item.content.map((line, index) => (
+                            <p key={index} className="text-gray-600">
+                              {line}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 

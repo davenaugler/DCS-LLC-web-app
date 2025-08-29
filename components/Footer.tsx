@@ -36,17 +36,17 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div className="grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-12">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-12">
           {/* Company Info - Takes more space */}
-          <div className="space-y-4 sm:col-span-2 lg:col-span-4">
-            <h2 className="text-xl font-bold lg:text-2xl">Dalrymple Construction Services, LLC</h2>
+          <div className="space-y-4 sm:col-span-2 lg:col-span-3">
+            <h2 className="text-xl font-bold lg:text-2xl">Dalrymple Construction Services</h2>
             <p className="text-sm text-gray-400 leading-relaxed">
               Over 20 years of excellence in construction, delivering quality projects and building trust with our communities.
             </p>
           </div>
 
           {/* Services - Smaller column */}
-          <div className="space-y-4 lg:col-span-2">
+          <div className="space-y-4 lg:col-span-2 lg:col-start-5">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Our Services
             </h3>
@@ -65,7 +65,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links - Smaller column */}
-          <div className="space-y-4 lg:col-span-2">
+          <div className="space-y-4 lg:col-span-2 lg:col-start-8">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Quick Links
             </h3>
@@ -84,7 +84,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info - Takes more space */}
-          <div className="space-y-4 sm:col-span-2 lg:col-span-4">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-3 lg:col-start-10">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Contact Us
             </h3>
