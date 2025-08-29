@@ -8,7 +8,6 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -119,7 +118,6 @@ export default function Navbar() {
 //   { name: "About", href: "/about" },
 //   { name: "Services", href: "/services" },
 //   { name: "Portfolio", href: "/portfolio" },
-//   { name: "FAQ", href: "/faq" },
 //   { name: "Contact", href: "/contact" },
 // ];
 
